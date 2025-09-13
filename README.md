@@ -1,1 +1,0 @@
-# Prabhakar-Mehta-590027804-Programming-in-C
