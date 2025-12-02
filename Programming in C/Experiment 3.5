@@ -1,0 +1,52 @@
+//According to the gregorian calendar, it was Monday on the date 01/01/01. If any year is input through the keyboard write a program to find out what is the day on 1st January of this year.//
+
+
+#include <stdio.h>
+int main() {
+   
+   printf("Name-Prabhakar \nSAP ID-590027804\nCourse-BCA\nBatch- B5\n");
+    int year, day, month, d1, m1, y1, k, j;
+    printf("Enter the year: ");
+    scanf("%d", &year);
+
+    if (month < 3) {
+        month += 12;
+        year -= 1;
+    }
+    
+    d1 = 1; 
+    m1 = 13; 
+    y1 = year % 100; 
+    k = year / 100; 
+   
+    day = (d1 + (13 * (m1 + 1)) / 5 + y1 + (y1 / 4) + (k / 4) - (2 * k)) % 7;
+    
+    
+    switch (day) {
+        case 0:
+            printf("Saturday\n");
+            break;
+        case 1:
+            printf("Sunday\n");
+            break;
+        case 2:
+            printf("Monday\n");
+            break;
+        case 3:
+            printf("Tuesday\n");
+            break;
+        case 4:
+            printf("Wednesday\n");
+            break;
+        case 5:
+            printf("Thursday\n");
+            break;
+        case 6:
+            printf("Friday\n");
+            break;
+        default:
+            printf("Error in calculation\n");
+    }
+    
+    return 0;
+}
